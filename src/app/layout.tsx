@@ -15,7 +15,7 @@ const dmMono = DM_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'Gelab — Automatizamos PyMEs argentinas con IA',
+  title: 'Gelab — Automatizamos negocios con IA',
   description: 'Desarrollo web profesional y automatización con inteligencia artificial para pequeñas y medianas empresas argentinas.',
 }
 

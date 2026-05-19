@@ -17,12 +17,12 @@ const steps = [
   {
     num: '03',
     title: 'Desarrollo',
-    desc: 'Construimos, configuramos y probamos todo con vos en el loop.',
+    desc: 'Construimos, configuramos y probamos todo, incluyendo tu feedback en cada paso.',
   },
   {
     num: '04',
     title: 'Entrega',
-    desc: 'Deploy, capacitación y soporte para que arranques sin fricción.',
+    desc: 'Deploy, capacitación y soporte para que arranques sin problemas.',
   },
 ]
 
@@ -42,7 +42,7 @@ export default function Proceso() {
             Simple, claro,<br />sin sorpresas.
           </h2>
           <p className={styles.subtitle}>
-            Cuatro pasos que llevan tu negocio del problema
+            Cuatro pasos que llevan tu empresa del problema
             a la solución en menos de 3 semanas.
           </p>
         </motion.div>

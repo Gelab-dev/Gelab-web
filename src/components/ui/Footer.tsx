@@ -3,9 +3,9 @@ import styles from './Footer.module.css'
 export default function Footer() {
   return (
     <footer className={styles.footer}>
-      <div className={styles.logo}>
+      <a href="#inicio" className={styles.logo}>
         <span className={styles.logoAccent}>G</span>elab
-      </div>
+      </a>
 
       <span className={styles.copy}>
         © 2025 Gelab · Juan Cruz Gelabert

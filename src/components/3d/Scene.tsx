@@ -5,7 +5,6 @@ import { Canvas, useFrame } from '@react-three/fiber'
 import { Float, Sphere, MeshDistortMaterial, Stars } from '@react-three/drei'
 import * as THREE from 'three'
 
-// Partículas generadas fuera del componente — solo una vez
 const PARTICLE_COUNT = 120
 const particlePositions = new Float32Array(PARTICLE_COUNT * 3)
 for (let i = 0; i < PARTICLE_COUNT; i++) {
@@ -16,11 +15,13 @@ for (let i = 0; i < PARTICLE_COUNT; i++) {
 
 function FloatingOrb() {
   const meshRef = useRef<THREE.Mesh>(null)
+  const elapsed = useRef(0)
 
-  useFrame((state) => {
+  useFrame((_, delta) => {
     if (!meshRef.current) return
-    meshRef.current.rotation.x = state.clock.elapsedTime * 0.15
-    meshRef.current.rotation.y = state.clock.elapsedTime * 0.2
+    elapsed.current += delta
+    meshRef.current.rotation.x = elapsed.current * 0.15
+    meshRef.current.rotation.y = elapsed.current * 0.2
   })
 
   return (
@@ -70,28 +71,30 @@ function FloatingRing({ position, rotation, scale }: {
 }
 
 function ParticleField() {
-    const pointsRef = useRef<THREE.Points>(null)
-  
-    useFrame((state) => {
-      if (!pointsRef.current) return
-      pointsRef.current.rotation.y = state.clock.elapsedTime * 0.03
-    })
-  
-    const geometry = new THREE.BufferGeometry()
-    geometry.setAttribute('position', new THREE.BufferAttribute(particlePositions, 3))
-  
-    return (
-      <points ref={pointsRef} geometry={geometry}>
-        <pointsMaterial
-          color="#B8FF47"
-          size={0.025}
-          transparent
-          opacity={0.6}
-          sizeAttenuation
-        />
-      </points>
-    )
-  }
+  const pointsRef = useRef<THREE.Points>(null)
+  const elapsed = useRef(0)
+
+  useFrame((_, delta) => {
+    if (!pointsRef.current) return
+    elapsed.current += delta
+    pointsRef.current.rotation.y = elapsed.current * 0.03
+  })
+
+  const geometry = new THREE.BufferGeometry()
+  geometry.setAttribute('position', new THREE.BufferAttribute(particlePositions, 3))
+
+  return (
+    <points ref={pointsRef} geometry={geometry}>
+      <pointsMaterial
+        color="#B8FF47"
+        size={0.025}
+        transparent
+        opacity={0.6}
+        sizeAttenuation
+      />
+    </points>
+  )
+}
 
 export default function Scene() {
   return (

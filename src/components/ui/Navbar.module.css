@@ -26,6 +26,10 @@
   z-index: 110;
 }
 
+.logoLink {
+  text-decoration: none;
+  color: var(--frost);
+}
 .logoAccent {
   color: var(--lime);
 }

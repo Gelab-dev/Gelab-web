@@ -14,6 +14,13 @@
   letter-spacing: -0.5px;
   color: var(--frost);
   font-family: var(--font-sans);
+  text-decoration: none;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.logo:hover {
+  opacity: 0.85;
 }
 
 .logoAccent {

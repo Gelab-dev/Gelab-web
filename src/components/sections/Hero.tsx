@@ -14,7 +14,7 @@ const fadeUp = (delay: number) => ({
 
 export default function Hero() {
   return (
-    <section className={styles.section}>
+    <section className={styles.section} id="inicio">
 
       <div className={styles.canvas}>
         <Scene />
@@ -36,15 +36,14 @@ export default function Hero() {
         </motion.div>
 
         <motion.h1 className={styles.title} {...fadeUp(0.1)}>
-          Tu PyME en la<br />
+          Tu negocio en la<br />
           era de la{' '}
           <span className={styles.titleAccent}>IA.</span>
         </motion.h1>
 
         <motion.p className={styles.subtitle} {...fadeUp(0.2)}>
-          Construimos webs profesionales y automatizamos
-          los procesos que te roban tiempo — para que tu
-          negocio crezca sin crecer el equipo.
+          — Construimos webs profesionales y automatizamos
+          los procesos que te roban tiempo —
         </motion.p>
 
         <motion.div className={styles.actions} {...fadeUp(0.3)}>

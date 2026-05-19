@@ -82,11 +82,11 @@ export default function Servicios() {
         <motion.div {...fadeUp(0)}>
           <span className={styles.tag}>{'// 01 — servicios'}</span>
           <h2 className={styles.title}>
-            Lo que hacemos<br />por tu negocio.
+            Lo que hacemos<br />por tu empresa.
           </h2>
           <p className={styles.subtitle}>
-            Tres servicios diseñados para PyMEs que quieren
-            resultados reales, no promesas tech.
+            Tres servicios diseñados para quienes buscan
+            resultados reales.
           </p>
         </motion.div>
 
@@ -122,7 +122,7 @@ export default function Servicios() {
             <span className={styles.footerEyebrow}>{'// inversión'}</span>
             <span className={styles.footerText}>
               Cada proyecto es único. Agendá una llamada
-              y en 30 minutos te doy una propuesta a medida.
+              y en 30 minutos te damos una propuesta a medida.
             </span>
           </div>
           <a href="#contacto" className={styles.footerBtn}>

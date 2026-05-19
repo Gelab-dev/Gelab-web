@@ -23,7 +23,7 @@ export default function Navbar() {
     <>
       <nav className={navClass}>
         <div className={styles.logo}>
-          <span className={styles.logoAccent}>G</span>elab
+          <a href="#inicio" className={styles.logoLink}><span className={styles.logoAccent}>G</span>elab</a>
         </div>
 
         {/* Desktop links */}

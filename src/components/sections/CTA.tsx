@@ -58,7 +58,7 @@ export default function CTA() {
             viewport={{ once: true }}
             transition={{ duration: 1, delay: 0.4 }}
           >
-            respondo en menos de 24 horas - La Plata, Buenos Aires
+            Respondemos en menos de 24 horas - La Plata, Buenos Aires
           </motion.p>
         </div>
       </section>
