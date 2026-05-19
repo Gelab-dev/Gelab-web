@@ -35,7 +35,7 @@ export default function CTA() {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <a
-              href="https://cal.com"
+              href="https://cal.com/gelab.dev/llamada-inicial"
               target="_blank"
               rel="noopener noreferrer"
               className={styles.btnPrimary}
@@ -43,7 +43,7 @@ export default function CTA() {
              {'Agendar una llamada →'}
             </a>
             <a
-              href="https://wa.me/549XXXXXXXXXX"
+              href="https://wa.me/5492804353853"
               target="_blank"
               rel="noopener noreferrer"
               className={styles.btnSecondary}

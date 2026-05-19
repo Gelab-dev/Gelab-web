@@ -13,7 +13,7 @@ export default function Footer() {
 
       <div className={styles.links}>
         <a
-          href="https://linkedin.com"
+          href="https://www.linkedin.com/company/gelab-dev"
           target="_blank"
           rel="noopener noreferrer"
           className={styles.link}
@@ -21,7 +21,7 @@ export default function Footer() {
           LinkedIn
         </a>
         <a
-          href="https://github.com/gelab-dev"
+          href="https://github.com/Gelab-dev"
           target="_blank"
           rel="noopener noreferrer"
           className={styles.link}
