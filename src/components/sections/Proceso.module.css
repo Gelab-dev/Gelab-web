@@ -1,0 +1,111 @@
+.section {
+    padding: 100px 40px;
+    background: var(--surface);
+    border-top: 0.5px solid var(--border);
+    border-bottom: 0.5px solid var(--border);
+  }
+  
+  .inner {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+  
+  .tag {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 10px;
+    color: var(--lime);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+  
+  .title {
+    font-size: clamp(28px, 4vw, 42px);
+    font-weight: 700;
+    letter-spacing: -1px;
+    color: var(--frost);
+    line-height: 1.15;
+    margin-bottom: 8px;
+    font-family: var(--font-sans);
+  }
+  
+  .subtitle {
+    font-size: 15px;
+    color: var(--muted);
+    line-height: 1.7;
+    max-width: 500px;
+    font-family: var(--font-sans);
+    margin-bottom: 64px;
+  }
+  
+  .steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    position: relative;
+  }
+  
+  .steps::before {
+    content: '';
+    position: absolute;
+    top: 24px;
+    left: 12.5%;
+    right: 12.5%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(184, 255, 71, 0.4), transparent);
+    z-index: 0;
+  }
+  
+  .step {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 0 20px;
+  }
+  
+  .stepNum {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: rgba(184, 255, 71, 0.1);
+    border: 0.5px solid rgba(184, 255, 71, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    font-family: var(--font-mono);
+    font-size: 13px;
+    color: var(--lime);
+    font-weight: 500;
+  }
+  
+  .stepTitle {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--frost);
+    margin-bottom: 8px;
+    font-family: var(--font-sans);
+  }
+  
+  .stepDesc {
+    font-size: 12px;
+    color: var(--muted);
+    line-height: 1.7;
+    font-family: var(--font-sans);
+  }
+  
+  @media (max-width: 768px) {
+    .section {
+      padding: 80px 24px;
+    }
+  
+    .steps {
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+  
+    .steps::before {
+      display: none;
+    }
+  }

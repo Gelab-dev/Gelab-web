@@ -1,0 +1,158 @@
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 40px;
+  transition: all 0.3s ease;
+}
+
+.navScrolled {
+  border-bottom: 0.5px solid var(--border);
+  background: rgba(10, 10, 15, 0.92);
+  backdrop-filter: blur(12px);
+}
+
+.logo {
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  color: var(--frost);
+  font-family: var(--font-sans);
+  z-index: 110;
+}
+
+.logoAccent {
+  color: var(--lime);
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.link {
+  font-size: 13px;
+  color: var(--muted);
+  text-decoration: none;
+  font-family: var(--font-sans);
+  transition: color 0.2s;
+}
+
+.link:hover {
+  color: var(--frost);
+}
+
+.cta {
+  background: var(--lime);
+  color: var(--void);
+  font-size: 13px;
+  font-weight: 600;
+  padding: 8px 18px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-family: var(--font-sans);
+  transition: opacity 0.2s;
+}
+
+.cta:hover {
+  opacity: 0.85;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 4px;
+  position: fixed;
+  top: 20px;
+  right: 24px;
+  z-index: 200;
+}
+
+.hamburgerLine {
+  width: 24px;
+  height: 1.5px;
+  background: var(--frost);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+  display: block;
+}
+
+.line1Open {
+  transform: translateY(6.5px) rotate(45deg);
+}
+
+.line2Open {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+.line3Open {
+  transform: translateY(-6.5px) rotate(-45deg);
+}
+
+.mobileMenu {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .nav {
+    padding: 18px 24px;
+  }
+
+  .links {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .mobileMenu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 28px;
+    position: fixed;
+    inset: 0;
+    background: rgba(10, 10, 15, 0.97);
+    backdrop-filter: blur(16px);
+    z-index: 105;
+    padding: 40px;
+  }
+
+  .mobileLink {
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--frost);
+    text-decoration: none;
+    font-family: var(--font-sans);
+    transition: color 0.2s;
+  }
+
+  .mobileLink:hover {
+    color: var(--lime);
+  }
+
+  .mobileCta {
+    background: var(--lime);
+    color: var(--void);
+    font-size: 16px;
+    font-weight: 600;
+    padding: 14px 32px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-family: var(--font-sans);
+    margin-top: 8px;
+  }
+}
