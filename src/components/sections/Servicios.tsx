@@ -24,6 +24,27 @@ const services = [
     featured: false,
   },
   {
+    badge: 'App',
+    badgeType: 'gray',
+    icon: (
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+        <rect x="2" y="3" width="20" height="14" rx="2" stroke="#B8FF47" strokeWidth="1.5"/>
+        <path d="M8 21h8M12 17v4" stroke="#B8FF47" strokeWidth="1.5" strokeLinecap="round"/>
+        <path d="M7 8h2m2 0h2m2 0h2" stroke="#B8FF47" strokeWidth="1.5" strokeLinecap="round"/>
+        <path d="M7 11h4" stroke="#B8FF47" strokeWidth="1.5" strokeLinecap="round"/>
+      </svg>
+    ),
+    title: 'Aplicación web a medida',
+    desc: 'Un sistema que resuelve un problema específico de tu negocio. Desde reservas y turnos hasta paneles de gestión completos.',
+    features: [
+      'Diseño y desarrollo a medida',
+      'Base de datos + Admin Panel',
+      'Integraciones',
+      'Acceso desde cualquier dispositivo',
+    ],
+    featured: false,
+  },
+  {
     badge: '⚡ Más pedido',
     badgeType: 'green',
     icon: (
