@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import Link from 'next/link'
 import styles from './Navbar.module.css'
 
 export default function Navbar() {
@@ -23,17 +24,17 @@ export default function Navbar() {
     <>
       <nav className={navClass}>
         <div className={styles.logo}>
-          <a href="#inicio" className={styles.logoLink}><span className={styles.logoAccent}>G</span>elab</a>
+          <Link href="/" className={styles.logoLink}><span className={styles.logoAccent}>G</span>elab</Link>
         </div>
 
         {/* Desktop links */}
         <div className={styles.links}>
-          <a href="#servicios" className={styles.link}>Servicios</a>
-          <a href="#proceso" className={styles.link}>Proceso</a>
-          <a href="#tecnologia" className={styles.link}>Tecnología</a>
-          <a href="/portfolio" className={styles.link}>Portfolio</a>
-          <a href="#contacto" className={styles.link}>Contacto</a>
-          <a href="#contacto" className={styles.cta}>{'Hablemos →'}</a>
+          <Link href="/#servicios"   className={styles.link}>Servicios</Link>
+          <Link href="/#proceso"     className={styles.link}>Proceso</Link>
+          <Link href="/#tecnologia"  className={styles.link}>Tecnología</Link>
+          <Link href="/portfolio"    className={styles.link}>Portfolio</Link>
+          <Link href="/#contacto"    className={styles.link}>Contacto</Link>
+          <Link href="/#contacto"    className={styles.cta}>{'Hablemos →'}</Link>
         </div>
       </nav>
 
@@ -51,12 +52,13 @@ export default function Navbar() {
       {/* Mobile menu overlay */}
       {menuOpen && (
         <div className={styles.mobileMenu}>
-          <a href="#servicios" className={styles.mobileLink} onClick={closeMenu}>Servicios</a>
-          <a href="#proceso" className={styles.mobileLink} onClick={closeMenu}>Proceso</a>
-          <a href="#tecnologia" className={styles.mobileLink} onClick={closeMenu}>Tecnología</a>
-          <a href="/portfolio" className={styles.mobileLink} onClick={closeMenu}>Portfolio</a>
-          <a href="#contacto" className={styles.mobileLink} onClick={closeMenu}>Contacto</a>
-          <a href="#contacto" className={styles.mobileCta} onClick={closeMenu}>{'Hablemos →'}</a>
+          <Link href="/"            className={styles.mobileLink} onClick={closeMenu}>Inicio</Link>
+          <Link href="/#servicios"  className={styles.mobileLink} onClick={closeMenu}>Servicios</Link>
+          <Link href="/#proceso"    className={styles.mobileLink} onClick={closeMenu}>Proceso</Link>
+          <Link href="/#tecnologia" className={styles.mobileLink} onClick={closeMenu}>Tecnología</Link>
+          <Link href="/portfolio"   className={styles.mobileLink} onClick={closeMenu}>Portfolio</Link>
+          <Link href="/#contacto"   className={styles.mobileLink} onClick={closeMenu}>Contacto</Link>
+          <Link href="/#contacto"   className={styles.mobileCta}  onClick={closeMenu}>{'Hablemos →'}</Link>
         </div>
       )}
     </>

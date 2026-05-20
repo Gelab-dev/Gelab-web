@@ -96,6 +96,58 @@ const techs = [
       </svg>
     ),
   },
+  {
+    name: 'Cloudbeds API',
+    main: false,
+    icon: (
+      <svg className={styles.badgeIcon} viewBox="0 0 24 24" fill="none">
+        <path d="M3 12a9 9 0 1 0 18 0 9 9 0 0 0-18 0" stroke="#B8FF47" strokeWidth="1.5"/>
+        <path d="M3 12h4m10 0h4M12 3v4m0 10v4" stroke="#B8FF47" strokeWidth="1.5" strokeLinecap="round"/>
+      </svg>
+    ),
+  },
+  {
+    name: 'PostgreSQL',
+    main: false,
+    icon: (
+      <svg className={styles.badgeIcon} viewBox="0 0 24 24" fill="none">
+        <ellipse cx="12" cy="6" rx="8" ry="3" stroke="#B8FF47" strokeWidth="1.5"/>
+        <path d="M4 6v6c0 1.657 3.582 3 8 3s8-1.343 8-3V6" stroke="#B8FF47" strokeWidth="1.5"/>
+        <path d="M4 12v6c0 1.657 3.582 3 8 3s8-1.343 8-3v-6" stroke="#B8FF47" strokeWidth="1.5"/>
+      </svg>
+    ),
+  },
+  {
+    name: 'MongoDB',
+    main: false,
+    icon: (
+      <svg className={styles.badgeIcon} viewBox="0 0 24 24" fill="none">
+        <path d="M12 2c0 0-6 7-6 12a6 6 0 0 0 12 0c0-5-6-12-6-12z" stroke="#B8FF47" strokeWidth="1.5" strokeLinejoin="round"/>
+        <path d="M12 22V12" stroke="#B8FF47" strokeWidth="1.5" strokeLinecap="round"/>
+      </svg>
+    ),
+  },
+  {
+    name: 'REST APIs',
+    main: false,
+    icon: (
+      <svg className={styles.badgeIcon} viewBox="0 0 24 24" fill="none">
+        <path d="M8 9l-4 3 4 3M16 9l4 3-4 3" stroke="#B8FF47" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+        <path d="M14 6l-4 12" stroke="#B8FF47" strokeWidth="1.5" strokeLinecap="round"/>
+      </svg>
+    ),
+  },
+  {
+    name: 'Mercado Pago',
+    main: false,
+    icon: (
+      <svg className={styles.badgeIcon} viewBox="0 0 24 24" fill="none">
+        <circle cx="12" cy="12" r="9" stroke="#B8FF47" strokeWidth="1.5"/>
+        <path d="M9 12h6M12 9v6" stroke="#B8FF47" strokeWidth="1.5" strokeLinecap="round"/>
+      </svg>
+    ),
+  },
+
 ]
 
 export default function Tecnologia() {

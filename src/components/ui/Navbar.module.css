@@ -18,12 +18,18 @@
 }
 
 .logo {
-  font-size: 26px;
+  font-size: 28px;
   font-weight: 700;
   letter-spacing: -0.5px;
   color: var(--frost);
   font-family: var(--font-sans);
+  text-decoration: none;
+  transition: opacity 0.2s;
   z-index: 110;
+}
+
+.logo:hover {
+  opacity: 0.8;
 }
 
 .logoLink {
