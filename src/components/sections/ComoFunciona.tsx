@@ -29,7 +29,7 @@ const ESCENARIOS = {
     veterinaria: {
       tab: '🐾 Veterinaria',
       antes: {
-        wappNombre: 'Menganito Pérez',
+        wappNombre: 'Fulana',
         wappInicial: 'M',
         mensajeCliente: 'Hola, quisiera sacar turno para mi perro. ¿Tienen para mañana?',
         hora: '14:32',
@@ -54,7 +54,7 @@ const ESCENARIOS = {
     inmobiliaria: {
       tab: '🏠 Inmobiliaria',
       antes: {
-        wappNombre: 'Fulanita Gómez',
+        wappNombre: 'Mengano',
         wappInicial: 'F',
         mensajeCliente: 'Buenas, quería consultar por el depto de 2 ambientes en calle 13. ¿Sigue disponible?',
         hora: '18:55',
@@ -79,7 +79,7 @@ const ESCENARIOS = {
     restaurant: {
       tab: '🍕 Restaurant',
       antes: {
-        wappNombre: 'Zultano Rodríguez',
+        wappNombre: 'Zultano',
         wappInicial: 'Z',
         mensajeCliente: 'Hola! ¿Hacen delivery? ¿Cuál es el menú y hasta qué hora atienden?',
         hora: '20:15',
