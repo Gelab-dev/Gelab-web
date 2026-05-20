@@ -1,0 +1,127 @@
+.card {
+    background: var(--surface);
+    border: 0.5px solid var(--border);
+    border-radius: 16px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: border-color 0.3s, transform 0.3s;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(255, 255, 255, 0.15);
+  }
+  
+  .cardTop {
+    height: 180px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  
+  .cardGlow {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  .card:hover .cardGlow {
+    opacity: 1;
+  }
+  
+  .cardIcon {
+    position: relative;
+    z-index: 1;
+    font-size: 48px;
+    transition: transform 0.3s;
+  }
+  
+  .card:hover .cardIcon {
+    transform: scale(1.1);
+  }
+  
+  .demoBadge {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    background: rgba(184, 255, 71, 0.12);
+    border: 0.5px solid rgba(184, 255, 71, 0.4);
+    border-radius: 20px;
+    padding: 4px 10px;
+    font-family: var(--font-mono);
+    font-size: 9px;
+    color: var(--lime);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    z-index: 2;
+  }
+  
+  .cardBody {
+    padding: 20px 24px 24px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+  
+  .cardCategory {
+    font-family: var(--font-mono);
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  
+  .cardTitle {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--frost);
+    margin-bottom: 6px;
+    font-family: var(--font-sans);
+    letter-spacing: -0.3px;
+  }
+  
+  .cardDesc {
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-family: var(--font-sans);
+    flex: 1;
+  }
+  
+  .cardTags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 16px;
+  }
+  
+  .tag {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    color: var(--muted);
+    background: rgba(255, 255, 255, 0.04);
+    border: 0.5px solid var(--border);
+    border-radius: 4px;
+    padding: 3px 8px;
+  }
+  
+  .cardAction {
+    font-family: var(--font-sans);
+    font-size: 13px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: gap 0.2s;
+  }
+  
+  .card:hover .cardAction {
+    gap: 10px;
+  }

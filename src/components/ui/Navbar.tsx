@@ -31,6 +31,7 @@ export default function Navbar() {
           <a href="#servicios" className={styles.link}>Servicios</a>
           <a href="#proceso" className={styles.link}>Proceso</a>
           <a href="#tecnologia" className={styles.link}>Tecnología</a>
+          <a href="/portfolio" className={styles.link}>Portfolio</a>
           <a href="#contacto" className={styles.link}>Contacto</a>
           <a href="#contacto" className={styles.cta}>{'Hablemos →'}</a>
         </div>
@@ -53,6 +54,7 @@ export default function Navbar() {
           <a href="#servicios" className={styles.mobileLink} onClick={closeMenu}>Servicios</a>
           <a href="#proceso" className={styles.mobileLink} onClick={closeMenu}>Proceso</a>
           <a href="#tecnologia" className={styles.mobileLink} onClick={closeMenu}>Tecnología</a>
+          <a href="/portfolio" className={styles.mobileLink} onClick={closeMenu}>Portfolio</a>
           <a href="#contacto" className={styles.mobileLink} onClick={closeMenu}>Contacto</a>
           <a href="#contacto" className={styles.mobileCta} onClick={closeMenu}>{'Hablemos →'}</a>
         </div>

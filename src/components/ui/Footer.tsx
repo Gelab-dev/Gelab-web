@@ -12,6 +12,7 @@ export default function Footer() {
       </span>
 
       <div className={styles.links}>
+        <a href="/portfolio" className={styles.link}>Portfolio</a>
         <a
           href="https://www.linkedin.com/company/gelab-dev"
           target="_blank"
