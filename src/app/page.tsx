@@ -1,6 +1,7 @@
 import Navbar from '@/components/ui/Navbar'
 import Hero from '@/components/sections/Hero'
 import Servicios from '@/components/sections/Servicios'
+import ComoFunciona from '@/components/sections/ComoFunciona'
 import Proceso from '@/components/sections/Proceso'
 import Tecnologia from '@/components/sections/Tecnologia'
 import CTA from '@/components/sections/CTA'
@@ -12,6 +13,7 @@ export default function Home() {
       <Navbar />
       <Hero />
       <Servicios />
+      <ComoFunciona />
       <Proceso />
       <Tecnologia />
       <CTA />

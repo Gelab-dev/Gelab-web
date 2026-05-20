@@ -30,6 +30,7 @@ export default function Navbar() {
         {/* Desktop links */}
         <div className={styles.links}>
           <Link href="/#servicios"   className={styles.link}>Servicios</Link>
+          <Link href="/#como-funciona"   className={styles.link}>Cómo funciona</Link>
           <Link href="/#proceso"     className={styles.link}>Proceso</Link>
           <Link href="/#tecnologia"  className={styles.link}>Tecnología</Link>
           <Link href="/portfolio"    className={styles.link}>Portfolio</Link>
@@ -54,6 +55,7 @@ export default function Navbar() {
         <div className={styles.mobileMenu}>
           <Link href="/"            className={styles.mobileLink} onClick={closeMenu}>Inicio</Link>
           <Link href="/#servicios"  className={styles.mobileLink} onClick={closeMenu}>Servicios</Link>
+          <Link href="/#como-funciona"  className={styles.mobileLink} onClick={closeMenu}>Cómo funciona</Link>
           <Link href="/#proceso"    className={styles.mobileLink} onClick={closeMenu}>Proceso</Link>
           <Link href="/#tecnologia" className={styles.mobileLink} onClick={closeMenu}>Tecnología</Link>
           <Link href="/portfolio"   className={styles.mobileLink} onClick={closeMenu}>Portfolio</Link>

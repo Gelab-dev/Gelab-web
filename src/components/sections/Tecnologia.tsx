@@ -161,7 +161,7 @@ export default function Tecnologia() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <span className={styles.tag}>{'// 03 — tecnología'}</span>
+          <span className={styles.tag}>{'// 04 — tecnología'}</span>
           <h2 className={styles.title}>
             Herramientas de<br />nivel enterprise.
           </h2>

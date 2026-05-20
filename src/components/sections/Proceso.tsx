@@ -37,7 +37,7 @@ export default function Proceso() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <span className={styles.tag}>{'// 02 — proceso'}</span>
+          <span className={styles.tag}>{'// 03 — proceso'}</span>
           <h2 className={styles.title}>
             Simple, claro,<br />sin sorpresas.
           </h2>
