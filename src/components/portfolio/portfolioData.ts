@@ -1,4 +1,4 @@
-export type Category = 'todos' | 'web' | 'automatizacion'
+export type Category = 'todos' | 'web' | 'webapp' | 'automatizacion'
 
 export interface Project {
   id: string
@@ -11,7 +11,7 @@ export interface Project {
   tags: string[]
   url?: string
   demo?: boolean
-  demoType?: 'chat'
+  demoType?: 'chat' | 'app'
   color: string
 }
 
@@ -33,13 +33,14 @@ export const projects: Project[] = [
     id: 'hoteldesk',
     title: 'HotelDesk',
     client: 'Demo — Sistema para Hoteles',
-    category: 'web',
+    category: 'webapp',
     description: 'Sistema de gestión de turnos de desayuno con integración a Cloudbeds. Los huéspedes reservan desde su habitación vía QR.',
     problem: 'Los hoteles gestionaban turnos de desayuno en papel o Excel, perdiendo tiempo y generando errores de coordinación con la cocina.',
     solution: 'App web accesible vía QR con verificación en tiempo real contra Cloudbeds, panel de administración completo, carga masiva de grupos y reporte CSV diario.',
     tags: ['Next.js', 'PostgreSQL', 'Cloudbeds API', 'Panel admin'],
     url: 'https://hotel-desk-murex.vercel.app/',
-    demo: false,
+    demo: true,
+    demoType: 'app',
     color: '#47B8FF',
   },
   {

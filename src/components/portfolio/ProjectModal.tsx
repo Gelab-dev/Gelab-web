@@ -8,6 +8,7 @@ import styles from './ProjectModal.module.css'
 
 const categoryLabel: Record<string, string> = {
   web: '// web',
+  webapp: '// aplicación web',
   automatizacion: '// automatización IA',
 }
 
@@ -19,7 +20,7 @@ interface Props {
 export default function ProjectModal({ project, onClose }: Props) {
   const [showDemo, setShowDemo] = useState(false)
 
-  if (showDemo) {
+  if (showDemo && project.demoType === 'chat') {
     return <DemoChat onClose={() => setShowDemo(false)} />
   }
 
@@ -75,14 +76,25 @@ export default function ProjectModal({ project, onClose }: Props) {
           </div>
 
           <div className={styles.actions}>
-            {project.demo ? (
+            {project.demo && project.demoType === 'chat' && (
               <button
                 className={styles.btnPrimary}
                 onClick={() => setShowDemo(true)}
               >
                 {'Probar demo en vivo →'}
               </button>
-            ) : (
+            )}
+            {project.demo && project.demoType === 'app' && project.url && (
+              <a
+                href={project.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.btnPrimary}
+              >
+                {'Abrir aplicación →'}
+              </a>
+            )}
+            {!project.demo && project.url && (
               <a
                 href={project.url}
                 target="_blank"

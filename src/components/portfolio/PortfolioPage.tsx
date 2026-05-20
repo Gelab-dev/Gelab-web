@@ -12,6 +12,7 @@ import styles from './Portfolio.module.css'
 const filters: { label: string; value: Category | 'todos' }[] = [
   { label: 'Todos', value: 'todos' },
   { label: 'Web', value: 'web' },
+  { label: 'Aplicaciones', value: 'webapp' },
   { label: 'Automatización IA', value: 'automatizacion' },
 ]
 

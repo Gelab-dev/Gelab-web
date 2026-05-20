@@ -6,12 +6,14 @@ import styles from './ProjectCard.module.css'
 
 const categoryLabel: Record<string, string> = {
   web: '// web',
+  webapp: '// aplicación web',
   automatizacion: '// automatización IA',
 }
 
 const categoryIcons: Record<string, string> = {
   web: '⬡',
-  automatizacion: '◈',
+  webapp: '◈',
+  automatizacion: '◇',
 }
 
 interface Props {
