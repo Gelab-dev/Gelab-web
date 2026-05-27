@@ -31,6 +31,14 @@ export default function Footer() {
           >
             GitHub
           </a>
+          <a
+            href="mailto:hola@gelab.dev"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.link}
+          >
+            hola@gelab.dev
+          </a>
           <a href="https://gelab.dev" className={styles.link}>gelab.dev</a>
         </div>
       </footer>
