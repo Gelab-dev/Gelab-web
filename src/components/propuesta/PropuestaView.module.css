@@ -1,0 +1,817 @@
+.page {
+    background: #0A0A0F;
+    min-height: 100vh;
+    font-family: var(--font-sans);
+  }
+
+  .inner {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 20px 24px 80px;
+  }
+  
+  /* NAVBAR */
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    padding: 14px 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: background 0.3s, backdrop-filter 0.3s, border-color 0.3s;
+    isolation: isolate;
+  }
+
+  .navbarScrolled {
+    background: rgba(10, 10, 15, 0.82);
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    border-bottom: 0.5px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 1px 40px rgba(0, 0, 0, 0.4);
+  }
+
+  .navLogo {
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    color: #F0F0F0;
+    text-decoration: none;
+    font-family: var(--font-sans);
+  }
+
+  .navLogoAccent {
+    color: #B8FF47;
+  }
+
+  .navDownload {
+    background: #B8FF47;
+    color: #0A0A0F;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: var(--font-sans);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: opacity 0.2s;
+  }
+
+  .navDownload:hover {
+    opacity: 0.88;
+  }
+
+  .navDownloadLabel {
+    display: inline;
+  }
+
+  /* PORTADA */
+  .cover {
+    padding: 56px 0 48px;
+    border-bottom: 0.5px solid rgba(255,255,255,0.07);
+    margin-bottom: 0;
+  }
+  
+  .coverTop {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 32px;
+    padding-top: 16px;
+  }
+
+  .coverDivider {
+    height: 0.5px;
+    background: rgba(255,255,255,0.07);
+    margin-top: 32px;
+  }
+  
+  .logo {
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    color: #F0F0F0;
+    text-decoration: none;
+  }
+  
+  .logoAccent {
+    color: #B8FF47;
+  }
+  
+  .coverDate {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: #5A5A6A;
+    letter-spacing: 0.08em;
+  }
+  
+  .coverTag {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    color: #B8FF47;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+    display: block;
+  }
+  
+  .coverTitle {
+    font-size: clamp(32px, 5vw, 48px);
+    font-weight: 700;
+    letter-spacing: -1.5px;
+    color: #F0F0F0;
+    line-height: 1.1;
+    margin-bottom: 10px;
+  }
+  
+  .coverClient {
+    font-size: 18px;
+    font-weight: 300;
+    color: #9A9AAA;
+    letter-spacing: -0.3px;
+    margin-bottom: 32px;
+  }
+  
+  .coverBottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding-top: 24px;
+    border-top: 0.5px solid rgba(255,255,255,0.07);
+  }
+  
+  .serviceBadge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(184,255,71,0.1);
+    border: 0.5px solid rgba(184,255,71,0.25);
+    border-radius: 20px;
+    padding: 6px 16px;
+    font-size: 12px;
+    color: #B8FF47;
+    font-family: var(--font-mono);
+    letter-spacing: 0.06em;
+  }
+  
+  .coverValid {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    color: #5A5A6A;
+  }
+  
+  /* SECCIONES */
+  .section {
+    padding: 48px 0;
+    border-bottom: 0.5px solid rgba(255,255,255,0.06);
+  }
+  
+  .section:last-of-type {
+    border-bottom: none;
+  }
+  
+  .secTag {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    color: #B8FF47;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    display: block;
+  }
+  
+  .secTitle {
+    font-size: clamp(24px, 3vw, 32px);
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    color: #F0F0F0;
+    margin-bottom: 20px;
+    line-height: 1.2;
+  }
+  
+  .secBody {
+    font-size: 16px;
+    color: #9A9AAA;
+    line-height: 1.75;
+  }
+  
+  .secBody strong {
+    color: #F0F0F0;
+    font-weight: 500;
+  }
+  
+  /* DOLOR */
+  .painCard {
+    background: #131318;
+    border: 0.5px solid rgba(255,255,255,0.06);
+    border-radius: 12px;
+    padding: 18px 20px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+  }
+  
+  .painIcon {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: rgba(248,113,113,0.12);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    color: #F87171;
+    font-size: 16px;
+  }
+  
+  .painTitle {
+    font-size: 14px;
+    font-weight: 500;
+    color: #F0F0F0;
+    margin-bottom: 4px;
+  }
+  
+  .painDesc {
+    font-size: 13px;
+    color: #9A9AAA;
+    line-height: 1.6;
+  }
+  
+  /* ENTREGABLES */
+  .deliverables {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 16px;
+  }
+  
+  .deliverable {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+    color: #9A9AAA;
+    padding: 10px 14px;
+    background: #131318;
+    border-radius: 8px;
+    border: 0.5px solid rgba(255,255,255,0.06);
+  }
+  
+  .deliverableDot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #B8FF47;
+    flex-shrink: 0;
+  }
+  
+  /* PROCESO */
+  .processSteps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-top: 16px;
+    position: relative;
+  }
+  
+  .processSteps::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 12.5%;
+    right: 12.5%;
+    height: 0.5px;
+    background: rgba(184,255,71,0.15);
+  }
+  
+  .procStep {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 8px;
+  }
+  
+  .procNum {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(184,255,71,0.08);
+    border: 0.5px solid rgba(184,255,71,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: #B8FF47;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .procLabel {
+    font-size: 14px;
+    font-weight: 500;
+    color: #F0F0F0;
+  }
+  
+  .procSub {
+    font-size: 12px;
+    color: #5A5A6A;
+    font-family: var(--font-mono);
+    line-height: 1.5;
+  }
+  
+  
+  /* INVERSIÓN */
+  .investCard {
+    background: #131318;
+    border: 0.5px solid rgba(184,255,71,0.2);
+    border-radius: 14px;
+    padding: 24px 28px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+  
+  .investLabel {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    color: #B8FF47;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+  
+  .investPrice {
+    font-size: 40px;
+    font-weight: 700;
+    color: #F0F0F0;
+    letter-spacing: -1.5px;
+    line-height: 1;
+  }
+  
+  .investSub {
+    font-size: 12px;
+    color: #5A5A6A;
+    font-family: var(--font-mono);
+    margin-top: 6px;
+  }
+  
+  .investIncludes {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .investItem {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: #9A9AAA;
+  }
+  
+  .investItem i {
+    color: #B8FF47;
+    font-size: 14px;
+  }
+  
+  .paymentRow {
+    margin-top: 14px;
+    padding: 12px 16px;
+    background: rgba(184,255,71,0.05);
+    border-radius: 8px;
+    border: 0.5px solid rgba(184,255,71,0.1);
+    font-size: 12px;
+    color: #9A9AAA;
+    font-family: var(--font-mono);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .paymentRow i {
+    color: #B8FF47;
+    font-size: 14px;
+  }
+  
+  .maintenanceRow {
+    margin-top: 10px;
+    padding: 12px 16px;
+    background: #131318;
+    border-radius: 8px;
+    border: 0.5px solid rgba(255,255,255,0.06);
+    font-size: 12px;
+    color: #5A5A6A;
+    font-family: var(--font-mono);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .maintenanceRow i {
+    color: #9A9AAA;
+    font-size: 14px;
+  }
+  
+  /* STACK */
+  .stackGrid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 16px;
+  }
+  
+  .stackPill {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border-radius: 20px;
+    background: #131318;
+    border: 0.5px solid rgba(255,255,255,0.08);
+    font-size: 11px;
+    color: #9A9AAA;
+    font-family: var(--font-mono);
+  }
+  
+  .stackPill i {
+    color: #B8FF47;
+    font-size: 13px;
+  }
+  
+  /* CTA */
+  .ctaCard {
+    background: rgba(184,255,71,0.05);
+    border: 0.5px solid rgba(184,255,71,0.2);
+    border-radius: 14px;
+    padding: 28px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+  
+  .ctaText {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  
+  .ctaTitle {
+    font-size: 18px;
+    font-weight: 700;
+    color: #F0F0F0;
+    letter-spacing: -0.3px;
+  }
+  
+  .ctaSub {
+    font-size: 14px;
+    color: #9A9AAA;
+  }
+  
+  .ctaActions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  
+  .btnPrimary {
+    background: #B8FF47;
+    color: #0A0A0F;
+    border: none;
+    border-radius: 10px;
+    padding: 11px 22px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: var(--font-sans);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    transition: opacity 0.2s;
+    white-space: nowrap;
+  }
+  
+  .btnPrimary:hover {
+    opacity: 0.88;
+  }
+  
+  .btnSecondary {
+    background: transparent;
+    color: #F0F0F0;
+    border: 0.5px solid rgba(255,255,255,0.15);
+    border-radius: 10px;
+    padding: 11px 22px;
+    font-size: 14px;
+    cursor: pointer;
+    font-family: var(--font-sans);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    transition: border-color 0.2s;
+    white-space: nowrap;
+  }
+  
+  .btnSecondary:hover {
+    border-color: rgba(255,255,255,0.35);
+  }
+  
+  /* FOOTER */
+  .footer {
+    padding: 28px 0;
+    border-top: 0.5px solid rgba(255,255,255,0.07);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  
+  .footerLogo {
+    font-size: 16px;
+    font-weight: 700;
+    color: #F0F0F0;
+    text-decoration: none;
+  }
+  
+  .footerLogoAccent {
+    color: #B8FF47;
+  }
+  
+  .footerCopy {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    color: #3A3A4A;
+  }
+  
+  @media (max-width: 600px) {
+    .coverTop {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 8px;
+    }
+  
+    .processSteps {
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+  
+    .processSteps::before {
+      display: none;
+    }
+  
+    .investCard {
+      flex-direction: column;
+    }
+  
+    .ctaCard {
+      flex-direction: column;
+    }
+  }
+
+  /* DIFERENCIADORES */
+.differentiators {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.diffCard {
+  background: #131318;
+  border: 0.5px solid rgba(255,255,255,0.06);
+  border-radius: 12px;
+  padding: 18px 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+}
+
+.diffIcon {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(184,255,71,0.1);
+  border: 0.5px solid rgba(184,255,71,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #B8FF47;
+  font-size: 17px;
+}
+
+.diffLabel {
+  font-size: 12px;
+  font-weight: 500;
+  color: #F0F0F0;
+  line-height: 1.4;
+  font-family: var(--font-sans);
+}
+
+/* CTA CENTRADO */
+.ctaCard {
+  background: rgba(184,255,71,0.05);
+  border: 0.5px solid rgba(184,255,71,0.2);
+  border-radius: 14px;
+  padding: 40px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+}
+
+.ctaTitle {
+  font-size: 22px;
+  font-weight: 700;
+  color: #F0F0F0;
+  letter-spacing: -0.3px;
+}
+
+.ctaSub {
+  font-size: 15px;
+  color: #9A9AAA;
+  line-height: 1.7;
+  max-width: 400px;
+}
+
+.ctaActions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* PARTÍCULAS */
+.particles {
+  position: fixed;
+  inset: 0;
+  z-index:-1;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.particle {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: #B8FF47;
+  border-radius: 50%;
+  opacity: 0;
+  animation: floatParticle linear infinite;
+}
+
+@keyframes floatParticle {
+  0%   { transform: translateY(100vh) scale(0); opacity: 0; }
+  10%  { opacity: 0.4; }
+  90%  { opacity: 0.2; }
+  100% { transform: translateY(-10vh) scale(1); opacity: 0; }
+}
+
+/* PDF */
+.pdfBtn {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background: #B8FF47;
+  color: #0A0A0F;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 18px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: var(--font-sans);
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  z-index: 50;
+  transition: opacity 0.2s;
+  box-shadow: 0 4px 20px rgba(184,255,71,0.2);
+}
+
+.pdfBtn:hover {
+  opacity: 0.88;
+}
+
+
+@media print {
+  .navbar { display: none !important; }
+  .particles { display: none !important; }
+  
+  @page {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .pageWrap {
+    background: #0A0A0F !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .inner {
+    padding: 40px 32px !important;
+    max-width: 100% !important;
+  }
+
+  .cover {
+    padding: 40px 0 32px !important;
+  }
+
+  .section {
+    break-inside: avoid;
+    padding: 32px 0 !important;
+  }
+
+  .painCard {
+    background: #131318 !important;
+    border: 0.5px solid rgba(255,255,255,0.06) !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .investCard {
+    background: #131318 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .deliverable {
+    background: #131318 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .diffCard {
+    background: #131318 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .ctaCard {
+    background: rgba(184,255,71,0.05) !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .paymentRow, .maintenanceRow {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .processSteps::before {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+  .differentiators {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+
+  .diffCard:last-child {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    padding: 12px 20px;
+  }
+
+  .navDownloadLabel {
+    display: none;
+  }
+
+  .navDownload {
+    padding: 8px 10px;
+  }
+
+  .inner {
+    padding: 40px 25px 80px;
+  }
+
+  .coverTop {
+    margin-bottom: 32px;
+  }
+}
