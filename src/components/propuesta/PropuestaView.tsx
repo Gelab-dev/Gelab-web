@@ -10,7 +10,7 @@ import {
     IconClockOff,
     IconBolt,
     IconHeadset,
-    IconRocket,
+    IconRosetteDiscountCheck,
     IconUsers,
     IconTrendingUp,
     IconCalendar,
@@ -18,7 +18,7 @@ import {
     IconCheck,
     IconCreditCard,
     IconRefresh,
-    IconDownload,
+    IconLayout,
   } from '@tabler/icons-react'
 import Link from 'next/link'
 
@@ -36,7 +36,7 @@ const SERVICE_SUBTITLE: Record<string, string> = {
 const DIFFERENTIATORS = [
     { icon: <IconBolt size={17} />,        label: 'Entrega rápida' },
     { icon: <IconHeadset size={17} />,     label: 'Soporte post-entrega' },
-    { icon: <IconRocket size={17} />,      label: 'Tecnología pensada para crecer' },
+    { icon: <IconRosetteDiscountCheck size={17} />,      label: 'Calidad garantizada' },
     { icon: <IconUsers size={17} />,       label: 'Capacitación al personal' },
     { icon: <IconTrendingUp size={17} />,  label: 'Soluciones que escalan' },
   ]
@@ -86,31 +86,6 @@ export default function PropuestaView({ propuesta: p }: Props) {
   const particlesRef = useRef<HTMLDivElement>(null)
 
   const [scrolled, setScrolled] = useState(false)
-  const [generandoPDF, setGenerandoPDF] = useState(false)
-
-  const handleDownloadPDF = () => {
-    // Fuerza todas las secciones animadas a ser visibles
-    const style = document.createElement('style')
-    style.id = 'print-override'
-    style.innerHTML = `
-      * {
-        opacity: 1 !important;
-        transform: none !important;
-        animation: none !important;
-        transition: none !important;
-      }
-    `
-    document.head.appendChild(style)
-    
-    window.print()
-    
-    // Limpia el estilo después de imprimir
-    setTimeout(() => {
-      document.getElementById('print-override')?.remove()
-    }, 1000)
-  }
-
-
 
   useEffect(() => {
   const onScroll = () => setScrolled(window.scrollY > 40)
@@ -149,17 +124,17 @@ export default function PropuestaView({ propuesta: p }: Props) {
             <Link href="/" className={styles.navLogo}>
                 <span className={styles.navLogoAccent}>G</span>elab
             </Link>
-            <button
+              {p.mockupUrl && (
+              <a
+                href={p.mockupUrl}
+                target="_blank"
+                rel="noopener noreferrer"
                 className={styles.navDownload}
-                onClick={handleDownloadPDF}
-                disabled={generandoPDF}
-                aria-label="Descargar PDF"
-            >
-                <IconDownload size={15} />
-                <span className={styles.navDownloadLabel}>
-                    {generandoPDF ? 'Generando...' : 'Descargar PDF'}
-                </span>
-            </button>
+              >
+                <IconLayout size={20} />
+                <span className={styles.navDownloadLabel}>Ver diseño</span>
+              </a>
+              )}
         </nav>
 
         <div className={styles.inner} id="propuesta-content">

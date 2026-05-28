@@ -22,6 +22,7 @@ export interface Propuesta {
   stack: string[]
   vencimiento: string
   activa: boolean
+  mockupUrl: string
 }
 
 type NotionProperty = PageObjectResponse['properties'][string]
@@ -33,6 +34,7 @@ function getText(prop: NotionProperty | undefined): string {
   if (prop.type === 'select') return prop.select?.name ?? ''
   if (prop.type === 'date') return prop.date?.start ?? ''
   if (prop.type === 'checkbox') return prop.checkbox ? 'true' : 'false'
+  if (prop.type === 'url') return prop.url ?? ''
   return ''
 }
 
@@ -79,6 +81,9 @@ export async function getPropuestaBySlug(slug: string): Promise<Propuesta | null
     const page = response.results[0] as PageObjectResponse
     const p = page.properties
 
+    console.log('mockupUrl raw:', p['Mockup URL'])
+console.log('mockupUrl value:', getText(p['Mockup URL']))
+
     return {
       slug,
       nombreNegocio:       getText(p['Nombre del negocio']),
@@ -100,6 +105,7 @@ export async function getPropuestaBySlug(slug: string): Promise<Propuesta | null
       stack:               getMultiSelect(p['Stack']),
       vencimiento:         getText(p['Vencimiento']),
       activa:              getText(p['Activa']) === 'true',
+      mockupUrl: getText(p['Mockup URL']),
     }
   } catch (error) {
     console.error('Error fetching propuesta:', error)
