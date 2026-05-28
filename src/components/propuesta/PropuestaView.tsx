@@ -341,7 +341,7 @@ export default function PropuestaView({ propuesta: p }: Props) {
           <span className={styles.secTag}>{'// 06 — próximo paso'}</span>
           <div className={styles.ctaCard}>
             <div className={styles.ctaText}>
-              <div className={styles.ctaTitle}>{'¿Arrancamos?'}</div>
+              <div className={styles.ctaTitle}>{'¿Empezamos?'}</div>
               <div className={styles.ctaSub}>
                 Contanos qué te pareció.<br />Cualquier duda o ajuste, estamos a un mensaje.
               </div>
