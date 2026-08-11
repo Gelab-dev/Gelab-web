@@ -13,6 +13,7 @@ export interface Project {
   demo?: boolean
   demoType?: 'chat' | 'app'
   color: string
+  image?: string
 }
 
 export const projects: Project[] = [
@@ -42,6 +43,21 @@ export const projects: Project[] = [
     demo: true,
     demoType: 'app',
     color: '#47B8FF',
+    image: "/images/portfolio/hoteldesk.png",
+  },
+  {
+    id: 'kaczan',
+    title: 'Kaczan & Asociados',
+    client: 'Estudio Kaczan — Arquitectura',
+    category: 'web',
+    description: 'Sitio web premium para estudio de arquitectura en La Plata. Galería de proyectos, servicios y contacto.',
+    problem: 'El estudio necesitaba una presencia digital que estuviera a la altura de la calidad de sus proyectos arquitectónicos.',
+    solution: 'Diseño y desarrollo de sitio web a medida con galería de obras, sección de servicios, prensa y experiencia visual premium.',
+    tags: ['Next.js', 'Diseño web', 'SEO', 'Mobile-first'],
+    url: 'https://estudiokaczan.com.ar',
+    demo: false,
+    color: '#A8C49A',
+    image: '/images/portfolio/kaczan.png',
   },
   {
     id: 'nomade',
@@ -55,6 +71,7 @@ export const projects: Project[] = [
     url: 'https://nomadecafe.ar',
     demo: false,
     color: '#B8FF47',
+    image: '/images/portfolio/nomade.png',
   },
   {
     id: 'vidriauto',
@@ -68,6 +85,7 @@ export const projects: Project[] = [
     url: 'https://vidriauto.com.ar',
     demo: false,
     color: '#47B8FF',
+    image: '/images/portfolio/vidriauto.png',
   },
   {
     id: 'gimenos',
@@ -81,5 +99,6 @@ export const projects: Project[] = [
     url: 'https://gimenos.com.au',
     demo: false,
     color: '#FF8C47',
+    image: '/images/portfolio/gimenos.png',
   },
 ]

@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion'
 import { Project } from './portfolioData'
 import styles from './ProjectCard.module.css'
+import Image from 'next/image'
 
 const categoryLabel: Record<string, string> = {
   web: '// web',
@@ -33,18 +34,38 @@ export default function ProjectCard({ project, index, onClick }: Props) {
       onClick={onClick}
     >
       <div className={styles.cardTop}>
-        <div
-          className={styles.cardGlow}
-          style={{
-            background: `radial-gradient(ellipse at 50% 50%, ${project.color}22, transparent 70%)`,
-          }}
-        />
-        <span
-          className={styles.cardIcon}
-          style={{ color: project.color }}
-        >
-          {categoryIcons[project.category]}
-        </span>
+        {project.image ? (
+          <>
+            <Image
+              src={project.image}
+              alt={project.title}
+              fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              className={styles.cardImage}
+              style={{ objectFit: 'cover', objectPosition: 'top' }}
+              loading={index === 0 ? 'eager' : 'lazy'}
+            />
+            <div
+              className={styles.cardImageOverlay}
+              style={{ background: `linear-gradient(to bottom, transparent 40%, ${project.color}18 100%)` }}
+            />
+          </>
+        ) : (
+          <div
+            className={styles.cardGlow}
+            style={{
+              background: `radial-gradient(ellipse at 50% 50%, ${project.color}22, transparent 70%)`,
+            }}
+          />
+        )}
+        {!project.image && (
+          <span
+            className={styles.cardIcon}
+            style={{ color: project.color }}
+          >
+            {categoryIcons[project.category]}
+          </span>
+        )}
         {project.demo && (
           <span className={styles.demoBadge}>Demo interactiva</span>
         )}
